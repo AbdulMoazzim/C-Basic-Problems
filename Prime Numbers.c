@@ -17,4 +17,5 @@ int primeChecking(int n){
 }
 int main(){
     printf("%d\n", primeChecking(6));
+    return 0;
 }

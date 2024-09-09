@@ -10,4 +10,5 @@ int main(){
     int a = 5; 
     int b = 6;
     printf("%d %d\n", swap(&a,&b));
+    return 0;
 }
