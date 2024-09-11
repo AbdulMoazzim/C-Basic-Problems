@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 int powerCalculate(int num,int* integer, int* power){
-  if (num % num != 0) {
-    return 0;
-  } 
+  int number;
   for (int i = *integer; i < num + 1; i++) {
+    number = num;
     *power = 0;
-    while (num > 1) {
-      if (num % i == 0){
+    while (number != 0) {
+      if (number % i == 0){
         *power += 1;
-        num /= i; 
-        if (num == 1){
+        number /= i; 
+        if (number == 1){
+          *integer = i;
           return 1;
         }
       }
@@ -19,13 +19,12 @@ int powerCalculate(int num,int* integer, int* power){
       }
     }
   }
-  return *power;
 }
 
 int main(){
-  int integer = 4;
+  int integer = 8;
   int power = 0;
-  powerCalculate(511, &integer, &power);
+  powerCalculate(256, &integer, &power);
   printf("%d^%d",integer, power);
   return 0;
 }
